@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="media/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    
+
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+
+      <a href="#discord">Discord</a>
+
+      <div class="desktop_navbar_link2_div">
+          <!-- ⭐ Upgraded donate button -->
+          <a href="https://ko-fi.com/ilikeapplepieandapplejuice" target="_blank"
+          style="background:#ff5f5f; padding:10px 18px; border-radius:8px; color:white; font-weight:bold; text-decoration:none;">
+          🚀 Help Upgrade Our RAM
+          </a>
+      </div>
+    </nav>
+
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a">
+        <img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo">
+      </a>
+
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+      </div>
+
+      <div class="icon" onclick="mobile_navbar_link_hider()">
+          <i class="fa fa-bars"></i>
+      </div>
+
+      <script>
+        function mobile_navbar_link_hider() {
+          var x = document.getElementById("mobile_navbar_links");
+          x.style.display = (x.style.display === "flex") ? "none" : "flex";
+        }
+      </script>
+    </div>
+
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/logo.png" alt="logo">
+        </a>
+
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">mc.jmnicelobster.top</span><br>
+            <span class="main1_ipcopier_text2">Click to copy</span>
+          </button>
+
+          <script>
+            function copyText() {
+              navigator.clipboard.writeText("mc.jmnicelobster.top");
+            }
+
+            $(document).ready(function() {
+              $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                  .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'));
+                $(this).after(popup);
+                setTimeout(function() {
+                  popup.remove();
+                }, 1000);
+              });
+            });
+          </script>
+        </div>
+      </div>
+
+      <div id="more"></div>
+
+    </div>
+
+    <div id="discord"></div>
+    <div class="main4">
+      <a class="headline">Join the Discord</a>
+      <a href="https://discord.gg/Zw4fVPwJmd" class="main4_dc_button_a">
+        <div class="main4_dc_button">Join</div>
+      </a>
+    </div>
+
+    <!-- ⭐ Always-working Donor Section (no iframe, no blocking) -->
+    <div style="text-align:center;margin-top:40px;">
+        <h2 style="color:white;font-size:32px;margin-bottom:20px;">⭐ Top Donators ⭐</h2>
+
+        <p style="color:white;opacity:0.8;margin-bottom:20px;">
+            View the live list of supporters and donations on Ko-fi.
+        </p>
+
+        <a href="https://ko-fi.com/ilikeapplepieandapplejuice/?view=donations" target="_blank"
+           style="background:#ff5f5f; padding:10px 18px; border-radius:8px; color:white; font-weight:bold; text-decoration:none;">
+            🔗 Open Donor List on Ko-fi
+        </a>
+    </div>
+
+</body>
+</html>
